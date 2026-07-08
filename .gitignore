@@ -48,7 +48,10 @@ pnpm-debug.log*
 # Optional local package files for build tooling
 package-lock.json
 
-# Keep documentation and PRD tracked
+# Keep core docs tracked
 !.gitignore
 !README.md
-!nxsandbox-PRD.md
+
+# Product requirement docs should stay local unless explicitly requested
+*PRD*.md
+*prd*.md
