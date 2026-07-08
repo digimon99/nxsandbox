@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Minimal custom declarations only; prefer inline utility classes in templates. */
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+}

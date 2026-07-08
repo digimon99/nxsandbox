@@ -1,0 +1,11 @@
+{
+  "name": "nxsandbox-build-tools",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Local build dependencies for nxsandbox",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  }
+}

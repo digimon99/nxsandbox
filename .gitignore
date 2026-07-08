@@ -1,0 +1,54 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Go build and test outputs
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+cover.out
+
+# Project binaries
+nxsandbox
+nxsandbox.exe
+nxsandbox-linux-new
+
+# Build metadata generated locally
+build_number.txt
+version.txt
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Node and frontend artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional local package files for build tooling
+package-lock.json
+
+# Keep documentation and PRD tracked
+!.gitignore
+!README.md
+!nxsandbox-PRD.md

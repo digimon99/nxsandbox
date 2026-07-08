@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verify - NX Sandbox</title>
+  <link rel="stylesheet" href="/static/css/ssr.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+  <main class="mx-auto flex min-h-screen w-full max-w-md items-center px-6 py-10">
+    <section class="w-full rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-xl shadow-black/20">
+      <h1 class="text-2xl font-semibold">Verify your code</h1>
+      <p class="mt-2 text-sm text-slate-400">Enter the six-digit code sent to your email.</p>
+      {{if .Error}}<p class="mt-4 rounded-lg border border-rose-900 bg-rose-950/40 px-3 py-2 text-sm text-rose-300">{{.Error}}</p>{{end}}
+      <form method="post" action="/signin/verify" class="mt-5 space-y-4">
+        <div>
+          <label class="mb-1 block text-sm font-medium text-slate-200" for="email">Email</label>
+          <input id="email" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-indigo-400 transition placeholder:text-slate-500 focus:ring-2" type="email" name="email" value="{{.Email}}" required autocomplete="email" />
+        </div>
+        <div>
+          <label class="mb-1 block text-sm font-medium text-slate-200" for="otp">Verification code</label>
+          <input id="otp" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm tracking-[0.35em] text-slate-100 outline-none ring-indigo-400 transition placeholder:text-slate-500 focus:ring-2" type="text" name="otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required autocomplete="one-time-code" placeholder="000000" />
+        </div>
+        <button class="inline-flex w-full items-center justify-center rounded-lg bg-indigo-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-400" type="submit">Verify and sign in</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

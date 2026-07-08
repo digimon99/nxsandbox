@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign In - NX Sandbox</title>
+  <link rel="stylesheet" href="/static/css/ssr.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+  <main class="mx-auto flex min-h-screen w-full max-w-md items-center px-6 py-10">
+    <section class="w-full rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-xl shadow-black/20">
+      <h1 class="text-2xl font-semibold">Sign in</h1>
+      <p class="mt-2 text-sm text-slate-400">No password required. We will send a one-time code.</p>
+      {{if .Error}}<p class="mt-4 rounded-lg border border-rose-900 bg-rose-950/40 px-3 py-2 text-sm text-rose-300">{{.Error}}</p>{{end}}
+      <form method="post" action="/signin" class="mt-5 space-y-4">
+        <div>
+          <label class="mb-1 block text-sm font-medium text-slate-200" for="email">Email address</label>
+          <input id="email" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none ring-indigo-400 transition placeholder:text-slate-500 focus:ring-2" type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+        </div>
+        <button class="inline-flex w-full items-center justify-center rounded-lg bg-indigo-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-400" type="submit">Send verification code</button>
+      </form>
+      <p class="mt-4 text-sm text-slate-400">Already have a code? <a class="font-medium text-cyan-300 hover:text-cyan-200" href="/signin/verify">Verify it now</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
