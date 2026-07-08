@@ -1,9 +1,17 @@
 # NX Sandbox
 
-Open source PaaS for deploying pre-built binaries into lightweight Linux sandboxes with colocated PostgreSQL.
+Push binary and serve instantly.
+
+NX Sandbox is an open-source PaaS for deploying pre-built binaries into lightweight Linux sandboxes with colocated PostgreSQL.
+
+It is designed for teams that want fast deployments without remote image builds or heavy platform lock-in.
 
 Status: Early stage, actively evolving
-License: MIT (planned repository baseline)
+License: MIT
+
+Suggested GitHub About description:
+
+Open-source binary-first PaaS. Push pre-built binaries and serve instantly with lightweight sandbox isolation and colocated PostgreSQL.
 
 ## Table of Contents
 
@@ -147,7 +155,7 @@ Top-level highlights:
 - build-and-deploy.ps1
 - .env.example
 - .gitignore
-- nxsandbox-PRD.md
+- LICENSE
 
 ## Roadmap
 
@@ -178,10 +186,10 @@ Recommended workflow:
 
 ## Documentation
 
-Core product and architecture requirements are documented in:
-
-- nxsandbox-PRD.md
-
 Repository hygiene is defined in:
 
 - .gitignore
+
+Note:
+
+- Product requirement documents are kept local and intentionally excluded from GitHub tracking by repository policy.
